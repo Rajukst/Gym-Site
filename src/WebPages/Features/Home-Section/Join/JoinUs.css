@@ -1,0 +1,23 @@
+.join-span{
+    color: red;
+}
+.join-now{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+.join-preview h1{
+    font-weight: bold;
+}
+.join-details{
+    border-radius: 50%;
+}
+.join-description{
+    text-align: justify;
+    padding: 20px;
+}
+.join-column{
+    border-right: 1px dotted black;
+}
+.join-columnTwo{
+    border-left: 1px dotted black;
+}
