@@ -1,0 +1,7 @@
+.image-hover:hover{
+    transition: ease-in 5s;
+    transform: scale(1.10);
+   }
+.my-card{
+    overflow: hidden;
+   }
