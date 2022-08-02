@@ -1,0 +1,15 @@
+.total-order{
+    border: 2px solid black;
+}
+.order-text{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+}
+.growth{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
