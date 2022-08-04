@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 
-const RevenueChart = () => {
+const ReportChart = () => {
    const series= [{
-        name: 'series1',
         data: [31, 40, 28, 51, 42, 109, 100]
       }]
-    const  options= {
+     const options= {
         chart: {
           height: 350,
           type: 'area'
@@ -29,9 +28,10 @@ const RevenueChart = () => {
       }
     return (
         <div>
-              <ReactApexChart options={options} series={series} type="area" height={120} />
+  <ReactApexChart options={options} series={series} type="area" height={350} />
+
         </div>
     );
 };
 
-export default RevenueChart;
+export default ReportChart;

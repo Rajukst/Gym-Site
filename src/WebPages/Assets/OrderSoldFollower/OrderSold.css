@@ -1,5 +1,5 @@
 .total-order{
-    border: 2px solid black;
+    background-color: azure;
 }
 .order-text{
     display: flex;
@@ -12,4 +12,19 @@
     display: flex;
     justify-content: space-between;
     padding: 10px;
+}
+.orders{
+    color: green;
+    font-weight: bold;
+}
+.growth p{
+    font-weight: bold;
+}
+.revenue{
+    color:chartreuse;
+    font-weight: bold;
+}
+.followers{
+    color: red;
+    font-weight: bold;
 }

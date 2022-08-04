@@ -1,3 +1,50 @@
-.all-elements{
-    border: 2px solid black;
+.sales-elements{
+    border-bottom: 3px solid blue;
+    background-color: azure;
+}
+.income-elements{
+    border-bottom: 3px solid rgb(94, 174, 206);
+    background-color: azure;
+}
+.lastMonth-elements{
+    border-bottom: 3px solid yellowgreen;
+    background-color: azure;
+}
+.revenue-elements{
+    border-bottom: 3px solid red;
+    background-color: azure;
+}
+.main-head{
+    background-color: azure;
+}
+.band-reports{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo-text{
+    display: flex;
+    align-items: center;
+}
+.tab-button{
+    padding-right: 10px;
+}
+.tabbuttonOne{
+    border: none;
+    background: none;
+    background-color: aquamarine;
+    padding: 8px 25px;
+    border-radius: 20px;
+}
+.tabbuttonTwo{
+    border: none;
+    background: none;
+    background-color:aqua;
+    padding: 8px 25px;
+    border-radius: 20px;
+}
+.sales-amount{
+    text-align: left;
+    padding-left: 10px;
+    font-weight: bold;
 }

@@ -14,14 +14,14 @@ const OrderSold = () => {
                   <p>Last year expencess</p>
                 </div>
                 <div className="numaric-number">
-                  <h3>1896</h3>
+                  <h3 className="orders">1896</h3>
                 </div>
               </div>
               <div className="progresses ps-2 pe-2">
               <ProgressBar now={90} />
               </div>
               <div className="growth">
-                <p>YoY Growth</p>
+                <p>Growth</p>
                 <p>100%</p>
               </div>
             </div>
@@ -34,7 +34,7 @@ const OrderSold = () => {
                   <p>Revenue Streams</p>
                 </div>
                 <div className="numaric-number">
-                  <h3>$3M</h3>
+                  <h3 className="revenue">$3M</h3>
                 </div>
               </div>
               <div className="progresses ps-2 pe-2">
@@ -54,14 +54,14 @@ const OrderSold = () => {
                   <p>People Interested</p>
                 </div>
                 <div className="numaric-number">
-                  <h3>45,9%</h3>
+                  <h3 className="followers">45,9%</h3>
                 </div>
               </div>
               <div className="progresses ps-2 pe-2">
               <ProgressBar variant="success" now={40} />
               </div>
               <div className="growth">
-                <p>Twitter Progress</p>
+                <p>Progress</p>
                 <p>100%</p>
               </div>
             </div>
