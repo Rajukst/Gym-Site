@@ -56,7 +56,9 @@ const Login = () => {
                         Login
                       </button>
                     </div>
-                    <div className="outhers-login mt-5">
+                  </div>
+                </form>
+                <div className="outhers-login mt-5">
                       <div className="sign-other">
                         <h3>Also Sign In With</h3>
                       </div>
@@ -78,14 +80,12 @@ const Login = () => {
                         <div className="githubs">
                           <abbr title="Github Sign In">
                             <button>
-                              <i class="fa-brands fa-github fa-3x githubIcon"></i>
+                              <i className="fa-brands fa-github fa-3x githubIcon"></i>
                             </button>
                           </abbr>
                         </div>
                       </div>
                     </div>
-                  </div>
-                </form>
               </div>
             </div>
           </Col>

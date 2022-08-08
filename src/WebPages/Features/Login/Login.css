@@ -1,11 +1,4 @@
-.logn-pagePic{
-    background-image: url("../../../Images/image.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
+
 .login-div input{
     width: 80%;
     height: 50px;
