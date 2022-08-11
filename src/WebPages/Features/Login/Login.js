@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Container, Row, Col, Alert } from "react-bootstrap";
+import { Container, Row, Col, Alert, Spinner } from "react-bootstrap";
 import Swal from "sweetalert2";
+import loginImg from "../../../Images/loginPic.jpg"
 import loginImage from "../../../Images/register.png";
 import useFirebase from "../../hooks/useFirebase";
 import "./Login.css";
@@ -36,7 +37,8 @@ const Login = () => {
           </Col>
           <Col xs={12} md={8} lg={8}>
             <div className="login-div">
-              <h1>User login </h1>
+              <h1 className="mt-5">User login </h1>
+              <img src={loginImg} alt="" width="300" height="300" />
               <div className="login-continer">
                 <form onSubmit={handleFormSubmit}>
                   <br />
@@ -69,8 +71,13 @@ const Login = () => {
                       </button>
                     </div>
                   </div>
+     
                 </form>
-       
+       {isLoading && <Spinner animation="grow" variant="warning" />}
+   {authError && <Alert variant="danger">
+          {authError}
+        </Alert>}
+ 
                 <div className="outhers-login mt-5">
                   <div className="sign-other">
                     <h3>Also Sign In With</h3>

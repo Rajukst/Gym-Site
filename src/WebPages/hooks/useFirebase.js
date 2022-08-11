@@ -54,7 +54,7 @@ const useFirebase=()=>{
                 // An error occurred
                 // ...
               });
-              history.replace("/")
+              history.push("/")
           })
           .catch((error) => {
             const errorCode = error.code;

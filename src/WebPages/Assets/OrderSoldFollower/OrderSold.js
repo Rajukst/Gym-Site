@@ -1,7 +1,16 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { Container, Row, Col, ProgressBar } from "react-bootstrap";
 import "./OrderSold.css";
 const OrderSold = () => {
+  const [course, setCourse]= useState([])
+  useEffect(()=>{
+    const url= 'http://localhost:5000/classes'
+    fetch(url)
+    .then(res=>res.json())
+    .then(data=>setCourse(data))
+  },[])
   return (
     <div>
       <Container fluid>
@@ -10,11 +19,11 @@ const OrderSold = () => {
             <div className="total-order">
               <div className="order-text">
                 <div className="text">
-                  <h5>Total Order</h5>
+                  <h5>Total Course</h5>
                   <p>Last year expencess</p>
                 </div>
                 <div className="numaric-number">
-                  <h3 className="orders">1896</h3>
+                  <h3 className="orders">{course.length}</h3>
                 </div>
               </div>
               <div className="progresses ps-2 pe-2">

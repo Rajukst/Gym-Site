@@ -5,3 +5,15 @@
 .class-span{
     color: red;
 }
+.seeSpan{
+    color: red;
+}
+.moreClass{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.seeMoreLink a{
+    text-decoration: none;
+    color: black;
+}

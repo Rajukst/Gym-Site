@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./Registration.css";
 import registerImage from "../../../Images/login.png";
-import { Container, Row, Col , Alert} from "react-bootstrap";
+import { Container, Row, Col, Spinner } from "react-bootstrap";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
+import signUp from "../../../Images/signup.png"
 import useFirebase from "../../hooks/useFirebase";
 const Registration = () => {
   const [register, setRegister] = useState({});
@@ -49,7 +49,8 @@ const Registration = () => {
           </Col>
           <Col xs={12} md={8} lg={8}>
             <div className="registration-div">
-              <h1>User Registration </h1>
+              <h1 className="mt-5">User Registration </h1>
+              <img src={signUp} alt="" width="300" height="300" />
               <div className="login-continer">
                 <form onSubmit={registerOnSubmit}>
                   <br />
@@ -110,9 +111,10 @@ const Registration = () => {
                       <button className="registerButton" type="submit">
                         Register
                       </button>
+                      
                     </div>
                   </div>
-                 
+                 {isLoading && <Spinner animation="grow" variant="dark" />}
                 </form>
                 <div className="outhers-login mt-5">
                   <div className="sign-other">

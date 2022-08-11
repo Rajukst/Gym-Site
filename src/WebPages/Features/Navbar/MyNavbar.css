@@ -12,3 +12,7 @@ color: aquamarine;
     align-items: center;
     font-size: 20px;
 }
+.displayName{
+    color: aqua;
+    font-weight: bold;
+}

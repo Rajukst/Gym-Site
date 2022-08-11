@@ -24,7 +24,7 @@ const MyNavbar = () => {
             <Link to="/blog">Our Blogs</Link>
             
               {user.email ? 
-              <div className="ms-5 text-light">Logged As: {user.displayName}  <button className="ms-2 logOutButton" onClick={logOut}>LogOut</button></div> 
+              <div className="ms-5 text-light">Hi, <span className="displayName">{user.displayName}</span>  <button className="ms-2 logOutButton" onClick={logOut}>LogOut</button></div> 
                
                : 
                 <Link className="class-link" to="/login">
