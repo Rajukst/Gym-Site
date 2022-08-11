@@ -1,17 +1,41 @@
 import React from 'react';
 import {Container, Navbar, Nav} from 'react-bootstrap'
 import { Link } from 'react-router-dom';
+import navimage from "../../../Images/navimg.png"
+import useFirebase from '../../hooks/useFirebase';
+import "./MyNavbar.css"
 const MyNavbar = () => {
+  const {user, logOut}= useFirebase();
     return (
-        <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Container>
+        <Link to="/"> <img src={navimage} alt="" height="50" width="70" /> </Link>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <Link to="/login">Login</Link>
-            <Link to="/register">Registration</Link>
+            <div className="navigationsLink">
+            <Link to="/service">Our Services</Link>
+            <Link to="/shop">Shop</Link>
+            <Link to="/about">About Us</Link>
+            </div>
           </Nav>
-        </Container>
-      </Navbar>
+          <Nav>
+          <div className="navigationsLink">
+            <Link to="/blog">Our Blogs</Link>
+            
+              {user.email ? 
+              <div className="ms-5 text-light">Logged As: {user.displayName}  <button className="ms-2 logOutButton" onClick={logOut}>LogOut</button></div> 
+               
+               : 
+                <Link className="class-link" to="/login">
+                  Login
+                </Link>
+              }
+            </div>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
     );
 };
 

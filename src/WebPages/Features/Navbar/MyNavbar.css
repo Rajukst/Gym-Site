@@ -1,0 +1,14 @@
+.navigationsLink a{
+text-decoration: none;
+margin-left: 3rem;
+color: white;
+font-size: 20px;
+}
+.navigationsLink a:hover{
+color: aquamarine;
+}
+.navigationsLink{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
