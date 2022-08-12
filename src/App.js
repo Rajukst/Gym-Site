@@ -8,6 +8,8 @@ import Dashboard from './WebPages/Admin/Dashboard/Dashboard';
 import Login from './WebPages/Features/Login/Login';
 import Registration from './WebPages/Features/Registration/Registration';
 import MyNavbar from './WebPages/Features/Navbar/MyNavbar';
+import SingleClass from './WebPages/Features/Home-Section/Classes/SingleClass';
+import OurService from './WebPages/Features/OurService/OurService';
 
 function App() {
   return (
@@ -18,8 +20,12 @@ function App() {
     <Route path="/" element={<Home/>} />
     <Route path="/add" element={<AddClasses />} />
     <Route path="/login" element={<Login />} />
+    <Route path="/our-service" element={<OurService />} />
     <Route path="/register" element={<Registration />} />
     <Route path="/dashboard" element={<Dashboard />} />
+    <Route path="services">
+        <Route path=":userId" element={<SingleClass />} />
+      </Route>
     </Routes>
     <Footer></Footer>
     </BrowserRouter>

@@ -1,11 +1,11 @@
-import React from "react";
-import { Card, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
-const DynamicClass = ({ getClass }) => {
-  const { _id, name, image, fee, description } = getClass;
-  return (
-    <div>
-      <Col>
+import React from 'react';
+import { Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import "./DynamicService.css"
+const DynamicOurService = ({ourService}) => {
+    const { _id, name, image, fee, description } = ourService;
+    return (
+        <Col>
         <div className="containerss">
           <div className="rows">
             <div className="aaaaa">
@@ -25,8 +25,7 @@ const DynamicClass = ({ getClass }) => {
           </div>
         </div>
       </Col>
-    </div>
-  );
+    );
 };
 
-export default DynamicClass;
+export default DynamicOurService;

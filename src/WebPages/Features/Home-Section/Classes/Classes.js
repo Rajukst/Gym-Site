@@ -27,7 +27,7 @@ const Classes = () => {
       </Row>
 
      <div className="seeMoreLink">
-     <Link to="/service"> <p className="moreClass">
+     <Link to="/our-service"> <p className="moreClass">
         <span className="seeSpan">See</span> More Classes
       </p></Link>
      </div>
