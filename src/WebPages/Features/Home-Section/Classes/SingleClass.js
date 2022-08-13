@@ -44,6 +44,14 @@ const SingleClass = () => {
             <div data-aos="fade-up" data-aos-duration="3000">
               <p>Info: {classes.description}</p>
             </div>
+            <div className="tips">
+              <h4>Tips</h4>
+              <p>{classes.tips}</p>
+            </div>
+            <div className="tips">
+              <h4>Muscles Work</h4>
+              <p>{classes.atvantage}</p>
+            </div>
           </div>
           <div
             data-aos="fade-down"

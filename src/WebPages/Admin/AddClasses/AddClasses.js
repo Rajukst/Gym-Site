@@ -6,14 +6,19 @@ const AddClasses = () => {
     const GymImage = useRef();
     const GymDetails = useRef();
     const GymFee = useRef();
-  
+    const Tips= useRef();
+    const Advantage= useRef();
+    const tagName= useRef();
     const handleOnSubmit = (e) => {
       e.preventDefault();
       const name = GymName.current.value;
       const image = GymImage.current.value;
       const description = GymDetails.current.value;
       const fee = GymFee.current.value;
-      const subtotal = { name, image, fee, description };
+      const tips= Tips.current.value;
+      const atvantage= Advantage.current.value;
+      const tag= tagName.current.value;
+      const subtotal = { name, image, fee, description, tips, atvantage, tag };
       console.log(subtotal);
       fetch("http://localhost:5000/add-class", {
         method: "POST",
@@ -28,7 +33,7 @@ const AddClasses = () => {
             Swal.fire({
               position: "center",
               icon: "success",
-              title: "Gym Class Added !!",
+              title: "Success!!",
               showConfirmButton: false,
               timer: 1500,
             });
@@ -76,11 +81,38 @@ const AddClasses = () => {
           name=""
           id=""
           ref={GymDetails}
-          placeholder="Some Description"
+          placeholder="Description"
           required
         />
         <br />
         <br />
+        <input
+          type="text"
+          name=""
+          id=""
+          ref={Tips}
+          placeholder="Tips For Use"
+          required
+        />
+        <br />
+        <br />
+        <input
+          type="text"
+          name=""
+          id=""
+          ref={Advantage}
+          placeholder="Mussle Works"
+          required
+        />
+        <br />
+        <br />
+        <br />
+        <br />
+        <label htmlFor="tag">Men or Women</label>
+        <select ref={tagName} name="tag" id="tag">
+          <option value="men">Men</option>
+          <option value="women">Women</option>
+        </select>
         <br />
         <br />
         <Button type="submit" variant="outline-info">
