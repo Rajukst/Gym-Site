@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Alert, Spinner } from "react-bootstrap";
 import Swal from "sweetalert2";
-import loginImg from "../../../Images/loginPic.jpg"
+import loginImg from "../../../Images/loginPic.jpg";
 import loginImage from "../../../Images/register.png";
 import useFirebase from "../../hooks/useFirebase";
+import CustomSpinner from "../CustomSpinner/CustomSpinner";
 import "./Login.css";
 const Login = () => {
   const [signInUser, setSignInUser] = useState({});
@@ -26,6 +27,7 @@ const Login = () => {
 
   return (
     <div className="login">
+      {isLoading && <CustomSpinner></CustomSpinner>}
       <Container fluid>
         <Row>
           <Col xs={12} md={4} lg={4}>
@@ -71,13 +73,8 @@ const Login = () => {
                       </button>
                     </div>
                   </div>
-     
                 </form>
-       {isLoading && <Spinner animation="grow" variant="warning" />}
-   {authError && <Alert variant="danger">
-          {authError}
-        </Alert>}
- 
+                {authError && <Alert variant="danger">{authError}</Alert>}
                 <div className="outhers-login mt-5">
                   <div className="sign-other">
                     <h3>Also Sign In With</h3>

@@ -1,8 +1,9 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const DynamicClass = ({ getClass }) => {
   const { _id, name, image, fee, description } = getClass;
+ 
   return (
     <div>
       <Col>
