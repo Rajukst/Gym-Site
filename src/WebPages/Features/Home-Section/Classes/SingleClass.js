@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { Container, Row, Col } from "react-bootstrap";
@@ -58,9 +58,9 @@ const SingleClass = () => {
             data-aos-easing="linear"
             data-aos-duration="1500"
           >
-            <button class="purchaseButton" role="button">
-              <span class="text">Purchase </span>
-            </button>
+           <Link to="/our-service"> <button class="purchaseButton" role="button">
+              <span class="text"><i className="fa-solid fa-arrow-left-long "></i> Back</span>
+            </button></Link>
           </div>
         </Col>
       </Row>

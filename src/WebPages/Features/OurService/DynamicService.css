@@ -2,3 +2,10 @@
     transform: rotateY(180deg);
     transition: ease-in-out 2s;
 }
+.banner{
+    background-image: url("../../../Images/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+
+}

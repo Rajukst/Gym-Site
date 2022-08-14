@@ -5,6 +5,7 @@ import "./DynamicService.css"
 const DynamicOurService = ({ourService}) => {
     const { _id, name, image, fee, description } = ourService;
     return (
+      <>
         <Col>
         <div className="containerss">
           <div className="rows">
@@ -19,12 +20,17 @@ const DynamicOurService = ({ourService}) => {
                       alt="Girl in a jacket"
                     />
                   </Link>
+                  <div className="descriptions">
+                    <h4>{name}</h4>
+                    <p>{description.slice(0,100)}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </Col>
+      </>
     );
 };
 
